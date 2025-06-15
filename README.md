@@ -13,3 +13,11 @@ Then reset the right controller and run:
 ```
 qmk flash -kb totem -km default -bl uf2-split-right
 ```
+
+For the visualization I use [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
+```
+qmk c2json keymaps/default/keymap.c | keymap -c visualize/keymap-drawer-config.yaml parse -c 12 -q - > visualize/keymap.yaml
+keymap -c visualize/keymap-drawer-config.yaml draw visualize/keymap.yaml > visualize/keymap.svg
+```
+
+![Visualization of the layout](./visualize/keymap.svg)

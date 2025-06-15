@@ -31,11 +31,6 @@ qmk flash -kb totem -km default -bl uf2-split-right
 
 ## Visualization
 
-The visualization below is generated with [keymap-drawer](https://github.com/caksoylar/keymap-drawer). 
-To update it, run the following commands:
-```
-qmk c2json keymaps/default/keymap.c | keymap -c visualize/keymap-drawer-config.yaml parse -c 12 -q - > visualize/keymap.yaml
-keymap -c visualize/keymap-drawer-config.yaml draw visualize/keymap.yaml > visualize/keymap.svg
-```
+The graphic below is generated with [keymap-drawer](https://github.com/caksoylar/keymap-drawer). 
 
 ![Visualization of the layout](./visualize/keymap.svg)

@@ -1,6 +1,3 @@
-# WARNING AI GENERATED SLOB BELOW
-
-
 # .github/workflows/keymap.yml
 
 name: Generate Keymap SVG
@@ -29,22 +26,36 @@ jobs:
           python-version: '3.11'
 
       # Step 3: Install the required Python packages
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install qmk keymap-drawer
 
-      # Step 4: Run your commands to generate the keymap.yaml and keymap.svg
-      # This uses the exact commands from your request.
-      # It also ensures the target directory exists first.
+      # Step 4: Set up the full QMK build environment.
+      # This clones qmk_firmware to /home/runner/qmk_firmware
+      - name: Set up QMK
+        run: |
+          qmk setup --yes
+          # Copy the udev rules required for some QMK hardware operations.
+          sudo cp /home/runner/qmk_firmware/util/udev/50-qmk.rules /etc/udev/rules.d/
+
+      # Step 5: Link repository and generate keymap visualization
       - name: Generate keymap visualization
         run: |
+          # Create a symbolic link from the checked-out repo ($GITHUB_WORKSPACE)
+          # to where QMK expects to find keyboards. This lets us use '-kb totem'.
+          # We are assuming your keyboard name is 'totem'.
+          ln -s "$GITHUB_WORKSPACE" /home/runner/qmk_firmware/keyboards/totem
+
+          # Ensure the output directory exists in your repository
           mkdir -p visualize
-          qmk c2json keymaps/default/keymap.c | keymap -c visualize/keymap-drawer-config.yaml parse -c 12 -q - > visualize/keymap.yaml
+
+          # Generate the visualization using the keyboard and keymap names.
+          # We assume your keymap name is 'default'.
+          qmk c2json -kb totem -km default | keymap -c visualize/keymap-drawer-config.yaml parse -c 12 -q - > visualize/keymap.yaml
           keymap -c visualize/keymap-drawer-config.yaml draw visualize/keymap.yaml > visualize/keymap.svg
 
-      # Step 5: Commit the newly generated keymap.svg back to your repository
-      # This action automatically detects if the file has changed and creates a commit.
+      # Step 6: Commit the newly generated keymap.svg back to your repository
       - name: Commit updated SVG
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

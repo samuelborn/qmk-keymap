@@ -17,8 +17,7 @@ Assuming default paths this is can be done with:
 git clone https://github.com/SamuelBorn/qmk-keymap.git ~/qmk_firmware/keyboards/totem
 ```
 
-Then *connect* the left half and *press reset button twice*.
-Then run:
+Then connect the left half, press the reset button twice and run:
 
 ```
 qmk flash -kb totem -km default -bl uf2-split-left

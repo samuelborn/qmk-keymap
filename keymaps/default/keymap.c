@@ -15,7 +15,6 @@ enum custom_keycodes {
     SEL_FWD,
     SEL_BACK,
     SEL_LINE,
-    EURO
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -27,16 +26,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_FUNCTION] = LAYOUT(
-                 KC_F11, KC_F9, KC_F8,   KC_F7,   _______,        _______, KC_BRIGHTNESS_DOWN,  KC_BRIGHTNESS_UP,    KC_PRINT_SCREEN,     _______,
+                 KC_F10, KC_F9, KC_F8,   KC_F7,   _______,        _______, KC_BRIGHTNESS_DOWN,  KC_BRIGHTNESS_UP,    KC_PRINT_SCREEN,     _______,
                  KC_F11, KC_F3, KC_F3,   KC_F1,   _______,        _______, KC_AUDIO_VOL_DOWN,   KC_AUDIO_VOL_UP,     KC_MUTE,             KC_PRINT_SCREEN,
-        _______, KC_F11, KC_F6, KC_F5,   KC_F4,   _______,        _______, KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK, KC_MEDIA_PLAY_PAUSE, _______,         _______,
+        _______, KC_F12, KC_F6, KC_F5,   KC_F4,   _______,        _______, KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK, KC_MEDIA_PLAY_PAUSE, _______,         _______,
                                 _______, _______, _______,        _______, _______, _______
     ),
 
     [_SYMBOLS] = LAYOUT(
                  LSFT(KC_6), KC_MINUS, LSFT(KC_COMMA), LSFT(KC_DOT), LSFT(KC_BACKSLASH),        KC_BACKSLASH, LSFT(KC_LEFT_BRACKET), LSFT(KC_RIGHT_BRACKET), KC_GRAVE, _______,
                  LSFT(KC_8), LSFT(KC_EQUAL), KC_SLASH, KC_EQUAL,     LSFT(KC_7),                LSFT(KC_3), LSFT(KC_9), LSFT(KC_0), LSFT(KC_1), LSFT(KC_SLASH),
-        _______, LSFT(KC_5), LSFT(KC_GRAVE), CURR_DIR, UP_DIR,       HOME_DIR,                  LSFT(KC_2), KC_LEFT_BRACKET, KC_RIGHT_BRACKET, LSFT(KC_4), EURO, _______,
+        _______, LSFT(KC_5), LSFT(KC_GRAVE), CURR_DIR, UP_DIR,       HOME_DIR,                  LSFT(KC_2), KC_LEFT_BRACKET, KC_RIGHT_BRACKET, LSFT(KC_4), RALT(KC_E), _______,
                                              _______,  _______,      _______,                   _______, _______, _______
     ),
 
@@ -86,11 +85,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 tap_code(KC_HOME);
                 tap_code16(LSFT(KC_END));
-            }
-            return false;
-        case EURO:
-            if (record->event.pressed) {
-                SEND_STRING("€");
             }
             return false;
     }

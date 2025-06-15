@@ -14,6 +14,10 @@ jobs:
     # Use the latest version of Ubuntu as the runner
     runs-on: ubuntu-latest
 
+    # Add this permissions block to allow the action to commit back to the repo
+    permissions:
+      contents: write
+
     steps:
       # Step 1: Check out your repository code
       - name: Check out repository

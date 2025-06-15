@@ -20,7 +20,7 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
-                 KC_E,         KC_L,         KC_D,         KC_C,         KC_V,               KC_J,    KC_F,         KC_O,         KC_U,         KC_COMMA,
+                 KC_Q,         KC_L,         KC_D,         KC_C,         KC_V,               KC_J,    KC_F,         KC_O,         KC_U,         KC_COMMA,
                  LGUI_T(KC_N), LALT_T(KC_R), LCTL_T(KC_T), LSFT_T(KC_S), KC_G,               KC_Y,    RSFT_T(KC_H), LCTL_T(KC_A), LALT_T(KC_E), LGUI_T(KC_I),
         KC_RALT, KC_Z,         KC_X,         KC_M,         KC_W,         KC_B,               KC_K,    KC_P,         KC_QUOTE,     KC_SEMICOLON, KC_DOT,       KC_LGUI,
         LT(_FUNCTION, KC_TAB), LT(_SYMBOLS, KC_SPACE), LT(_NAV, KC_DELETE),                  LT(_NUMPAD, KC_ENTER), LT(_SYMBOLS, KC_ESCAPE), LT(_FUNCTION, KC_BACKSPACE)

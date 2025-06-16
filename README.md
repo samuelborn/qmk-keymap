@@ -30,6 +30,6 @@ qmk flash -kb totem -km default -bl uf2-split-right
 
 ## Visualization
 
-The graphic below is generated with keymap-drawer.
+The graphic below is generated with [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
 
 ![Visualization of the layout](./visualize/keymap.svg)

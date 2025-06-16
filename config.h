@@ -1,5 +1,5 @@
-// Copyright 2022 GEIST @geigeigeist
-// SPDX-License-Identifier: GPL-2.0-or-later
+// This file defines the hardware specific settings
+// use ./keymaps/default/config.h for keymap specific settings
 #pragma once
 
 #define MATRIX_ROWS 8

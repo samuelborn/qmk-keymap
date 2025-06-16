@@ -1,26 +1,20 @@
-name: Generate Keymap SVG
-
+name: Visualize Keymap
 on:
-  workflow_dispatch:
+  workflow-dispatch:
   push:
-    paths:
-      - 'keymaps/totem/keymap.c'
-
+    branches: [ "main", "master" ]
 jobs:
-  generate-svg:
+  build:
     runs-on: ubuntu-latest
+    container: ghcr.io/qmk/qmk_cli
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - run: pip install keymap-drawer
+      - run: |
+          mkdir -p /qmk_firmware/keyboards/qmk-keymap
+          cp -r . /qmk_firmware/keyboards/qmk-keymap
+      - run: |
+          qmk c2json /qmk_firmware/keyboards/qmk-keymap/keymaps/default/keymap.c | keymap parse -q - > visualize.yaml
+          # keymap draw visualize.yaml > visualize.svg
 
-      - name: Generate Keymap Files
-        run: |
-          mkdir -p visualize
-          docker run --rm -v ${{ github.workspace }}:/qmk -w /qmk ghcr.io/qmk/qmk_cli sh -c "qmk c2json -kb totem -km default | keymap -c visualize/keymap-drawer-config.yaml parse -c 12 -q - > visualize/keymap.yaml && keymap -c visualize/keymap-drawer-config.yaml draw visualize/keymap.yaml > visualize/keymap.svg"
-
-      - name: Commit Files
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "docs: update keymap visualization"
-          file_pattern: visualize/keymap.yaml visualize/keymap.svg
 

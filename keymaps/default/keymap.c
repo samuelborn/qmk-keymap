@@ -33,10 +33,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_SYMBOLS] = LAYOUT(
-                 LSFT(KC_6), KC_MINUS, LSFT(KC_COMMA), LSFT(KC_DOT), LSFT(KC_BACKSLASH),        KC_BACKSLASH, LSFT(KC_LEFT_BRACKET), LSFT(KC_RIGHT_BRACKET), KC_GRAVE, _______,
-                 LSFT(KC_8), LSFT(KC_EQUAL), KC_SLASH, KC_EQUAL,     LSFT(KC_7),                LSFT(KC_3), LSFT(KC_9), LSFT(KC_0), LSFT(KC_1), LSFT(KC_SLASH),
-        _______, LSFT(KC_5), LSFT(KC_GRAVE), CURR_DIR, UP_DIR,       HOME_DIR,                  LSFT(KC_2), KC_LEFT_BRACKET, KC_RIGHT_BRACKET, LSFT(KC_4), RALT(KC_E), _______,
-                                             _______,  _______,      _______,                   _______, _______, _______
+                 KC_CIRC, KC_MINUS, KC_LT, KC_GT, KC_BACKSLASH,     KC_BACKSLASH, KC_LBRC, KC_RBRC, KC_GRAVE, _______,
+                 KC_ASTERISK, KC_PLUS, KC_SLASH, KC_EQUAL,          KC_AMPERSAND, KC_HASH, KC_LPRN, KC_RPRN, KC_EXCLAIM, KC_QUESTION,
+        _______, KC_PERCENT, KC_TILDE, CURR_DIR, UP_DIR,            HOME_DIR, KC_AT, KC_LEFT_BRACKET, KC_RIGHT_BRACKET, KC_DOLLAR, RALT(KC_E), _______,
+                                     _______, _______, _______,     _______, _______, _______
     ),
 
     [_NAV] = LAYOUT(
@@ -47,8 +47,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_NUMPAD] = LAYOUT(
-                 LSFT(KC_6),  KC_9,    KC_8,    KC_7,    _______,        _______, _______, _______, _______, _______,
-                 LSFT(KC_8),  KC_3,    KC_2,    KC_1,    KC_PLUS,        _______, KC_RSFT, KC_LCTL, KC_LALT, KC_LGUI,
+                 KC_CIRC,  KC_9,    KC_8,    KC_7,    _______,        _______, _______, _______, _______, _______,
+                 KC_ASTERISK,  KC_3,    KC_2,    KC_1,    KC_PLUS,        _______, KC_RSFT, KC_LCTL, KC_LALT, KC_LGUI,
         _______, KC_SLASH,    KC_6,    KC_5,    KC_4,    KC_MINUS,       _______, _______, _______, _______, _______, _______,
                                        KC_0,    KC_DOT,  KC_COMMA,       _______, _______, _______
     ),

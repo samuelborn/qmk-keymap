@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_FUNCTION] = LAYOUT(
                  KC_F10, KC_F9, KC_F8,   KC_F7,   _______,        _______, KC_BRIGHTNESS_DOWN,  KC_BRIGHTNESS_UP,    KC_PRINT_SCREEN,     _______,
-                 KC_F11, KC_F3, KC_F3,   KC_F1,   _______,        _______, KC_AUDIO_VOL_DOWN,   KC_AUDIO_VOL_UP,     KC_MUTE,             KC_PRINT_SCREEN,
+                 KC_F11, KC_F3, KC_F2,   KC_F1,   _______,        _______, KC_AUDIO_VOL_DOWN,   KC_AUDIO_VOL_UP,     KC_MUTE,             KC_PRINT_SCREEN,
         _______, KC_F12, KC_F6, KC_F5,   KC_F4,   _______,        _______, KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK, KC_MEDIA_PLAY_PAUSE, _______,         _______,
                                 _______, _______, _______,        _______, _______, _______
     ),

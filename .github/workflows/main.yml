@@ -7,6 +7,7 @@ name: Generate Keymap SVG
 # This action now runs on pushes to the 'main' branch, but ONLY if
 # the 'keymaps/default/keymap.c' file was changed.
 on:
+  workflow_dispatch:
   push:
     branches:
       - main

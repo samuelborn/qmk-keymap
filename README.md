@@ -32,4 +32,4 @@ qmk flash -kb totem -km default -bl uf2-split-right
 
 The graphic below is generated with [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
 
-![Visualization of the layout](./visualize/keymap.svg)
+![Visualization of the layout](keymap.svg)

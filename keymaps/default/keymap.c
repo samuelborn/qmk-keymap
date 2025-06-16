@@ -57,22 +57,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
-            case up_dir:
+            case UP_DIR:
                 send_string("../");
                 return false;
-            case curr_dir:
+            case CURR_DIR:
                 send_string("./");
                 return false;
-            case home_dir:
+            case HOME_DIR:
                 send_string("~/");
                 return false;
-            case sel_fwd:
+            case SEL_FWD:
                 tap_code16(LCTL(LSFT(KC_RGHT)));
                 return false;
-            case sel_back:
+            case SEL_BACK:
                 tap_code16(LCTL(LSFT(KC_LEFT)));
                 return false;
-            case sel_line:
+            case SEL_LINE:
                 tap_code(KC_HOME);
                 tap_code16(LSFT(KC_END));
                 return false;

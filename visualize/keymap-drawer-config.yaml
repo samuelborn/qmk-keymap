@@ -83,6 +83,7 @@ parse_config:
     LSFT(KC_GRAVE): '~'
     LSFT(KC_2): '@'
     LSFT(KC_4): '$'
+    RALT(KC_E): '€'
     XXXXXXX: ''
     'NO': ''
     MINUS: '-'

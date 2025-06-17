@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_SYMBOLS] = LAYOUT(
-                 KC_CIRC, KC_MINUS, KC_LT, KC_GT, KC_BACKSLASH,                                                 KC_BACKSLASH, KC_LBRC, KC_RBRC, KC_GRAVE, _______,
+                 KC_CIRC, KC_MINUS, KC_LT, KC_GT, KC_BACKSLASH,                                                 KC_BACKSLASH, KC_LCBR, KC_RCBR, KC_GRAVE, _______,
                  LGUI_T(KC_ASTERISK), LALT_T(KC_PLUS), LCTL_T(KC_SLASH), LSFT_T(KC_EQUAL), KC_AMPERSAND,        KC_HASH,    RSFT_T(KC_LPRN), LCTL_T(KC_RPRN), LALT_T(KC_EXCLAIM), LGUI_T(KC_QUESTION),
         _______, KC_PERCENT, KC_TILDE, CURR_DIR, UP_DIR, HOME_DIR,                                              KC_AT, KC_LEFT_BRACKET, KC_RIGHT_BRACKET, KC_DOLLAR, RALT(KC_E), _______,
                                         _______, _______, _______,                                              _______, _______, _______

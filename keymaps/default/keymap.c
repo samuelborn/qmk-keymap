@@ -19,17 +19,17 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
-                 KC_Q,         KC_L,         KC_D,         KC_C,         KC_V,               KC_J,    KC_F,         KC_O,         KC_U,         KC_COMMA,
+                 KC_Q,         KC_L,         KC_D,         KC_C,         KC_V,               KC_J,    KC_F,         KC_O,         KC_U,         KC_DOT,
                  LGUI_T(KC_N), LALT_T(KC_R), LCTL_T(KC_T), LSFT_T(KC_S), KC_G,               KC_Y,    RSFT_T(KC_H), LCTL_T(KC_A), LALT_T(KC_E), LGUI_T(KC_I),
-        KC_RALT, KC_Z,         KC_X,         KC_M,         KC_W,         KC_B,               KC_K,    KC_P,         KC_QUOTE,     KC_SEMICOLON, KC_DOT,       KC_LGUI,
+        KC_RALT, KC_Z,         KC_X,         KC_M,         KC_W,         KC_B,               KC_K,    KC_P,         KC_QUOTE,     KC_SEMICOLON, KC_COMMA,     KC_LGUI,
         LT(_FUNCTION, KC_TAB), LT(_SYMBOLS, KC_SPACE), LT(_NAV, KC_DELETE),                  LT(_NUMPAD, KC_ENTER), LT(_SYMBOLS, KC_BACKSPACE), LT(_FUNCTION, KC_ESCAPE)
     ),
 
     [_SYMBOLS] = LAYOUT(
                  KC_BACKSLASH, KC_LT, KC_GT, KC_MINUS, KC_PERCENT,                                        KC_PIPE, KC_LBRC, KC_RBRC, KC_GRAVE, _______,
-                 LGUI_T(KC_ASTERISK), LALT_T(KC_PLUS), LCTL_T(KC_SLASH), LSFT_T(KC_EQUAL), KC_AMPERSAND,        KC_HASH, RSFT_T(KC_LPRN), LCTL_T(KC_RPRN), LALT_T(KC_EXCLAIM), LGUI_T(KC_QUESTION),
-        _______, KC_CIRC, KC_TILDE, CURR_DIR, UP_DIR, HOME_DIR,                                              KC_AT, KC_LCBR, KC_RCBR, KC_DOLLAR, RALT(KC_E), _______,
-                                        _______, _______, _______,                                           _______, _______, _______
+                 LGUI_T(KC_ASTERISK), LALT_T(KC_PLUS), LCTL_T(KC_SLASH), LSFT_T(KC_EQUAL), KC_AMPERSAND,  KC_HASH, RSFT_T(KC_LPRN), LCTL_T(KC_RPRN), LALT_T(KC_EXCLAIM), LGUI_T(KC_QUESTION),
+        _______, KC_CIRC,  KC_TILDE, CURR_DIR, UP_DIR, HOME_DIR,                                          KC_AT, KC_LCBR, KC_RCBR, KC_DOLLAR, RALT(KC_E), _______,
+                                      _______, _______, _______,                                          _______, _______, _______
     ),
 
     [_NAV] = LAYOUT(

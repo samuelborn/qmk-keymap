@@ -19,10 +19,10 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
-                 KC_Q,         KC_L,         KC_D,         KC_C,         KC_V,               KC_J,    KC_F,         KC_O,         KC_U,         KC_DOT,
-                 LGUI_T(KC_N), LALT_T(KC_R), LCTL_T(KC_T), LSFT_T(KC_S), KC_G,               KC_Y,    RSFT_T(KC_H), LCTL_T(KC_A), LALT_T(KC_E), LGUI_T(KC_I),
-        KC_RALT, KC_Z,         KC_X,         KC_M,         KC_W,         KC_B,               KC_K,    KC_P,         KC_QUOTE,     KC_SEMICOLON, KC_COMMA,     KC_LGUI,
-        LT(_FUNCTION, KC_TAB), LT(_SYMBOLS, KC_SPACE), LT(_NAV, KC_DELETE),                  LT(_NUMPAD, KC_ENTER), LT(_SYMBOLS, KC_BACKSPACE), LT(_FUNCTION, KC_ESCAPE)
+                 KC_Q,         KC_L,         KC_D,         KC_C,         KC_V,           KC_J,    KC_F,         KC_O,         KC_U,         KC_DOT,
+                 LGUI_T(KC_N), LALT_T(KC_R), LCTL_T(KC_T), LSFT_T(KC_S), KC_G,           KC_Y,    RSFT_T(KC_H), LCTL_T(KC_A), LALT_T(KC_E), LGUI_T(KC_I),
+        KC_RALT, KC_Z,         KC_X,         KC_M,         KC_W,         KC_B,           KC_K,    KC_P,         KC_QUOTE,     KC_SEMICOLON, KC_COMMA,     KC_LGUI,
+        LT(_FUNCTION, KC_TAB), LT(_SYMBOLS, KC_SPACE), LT(_NAV, KC_DELETE),              LT(_NUMPAD, KC_ENTER), LT(_SYMBOLS, KC_BACKSPACE), LT(_FUNCTION, KC_ESCAPE)
     ),
 
     [_SYMBOLS] = LAYOUT(
@@ -40,10 +40,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_NUMPAD] = LAYOUT(
-                 KC_CIRC,     KC_9, KC_8, KC_7,   _______,              _______, _______, _______, _______, _______,
-                 KC_ASTERISK, KC_3, KC_2, KC_1,   KC_PLUS,              _______, KC_RSFT, KC_LCTL, KC_LALT, KC_LGUI,
-        _______, KC_SLASH,    KC_6, KC_5, KC_4,   KC_MINUS,             _______, _______, _______, _______, _______, _______,
-                                    KC_DOT, KC_0, KC_COMMA,             _______, _______, _______
+                 KC_CIRC,     KC_9, KC_8, KC_7, _______,                _______, _______, _______, _______, _______,
+                 KC_ASTERISK, KC_3, KC_2, KC_1, KC_PLUS,                _______, KC_RSFT, KC_LCTL, KC_LALT, KC_LGUI,
+        _______, KC_SLASH,    KC_6, KC_5, KC_4, KC_MINUS,               _______, _______, _______, _______, _______, _______,
+                                  KC_DOT, KC_0, KC_COMMA,               _______, _______, _______
     ),
 
     [_FUNCTION] = LAYOUT(

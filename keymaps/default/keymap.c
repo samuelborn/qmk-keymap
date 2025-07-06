@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_FUNCTION] = LAYOUT(
-                                       KC_F10, KC_F9, KC_F8, KC_F7, _______,                _______, KC_BRID, KC_BRIU, ______, _______,
+                                       KC_F10, KC_F9, KC_F8, KC_F7, _______,                _______, KC_BRID, KC_BRIU, _______, _______,
        LGUI_T(KC_F11), LALT_T(KC_F3), LCTL_T(KC_F2), LSFT_T(KC_F1), _______,                _______, RSFT_T(KC_VOLD), LCTL_T(KC_VOLU), LALT_T(KC_MUTE), LGUI_T(KC_PSCR),
                               _______, KC_F12, KC_F6, KC_F5, KC_F4, _______,                _______, KC_MPRV, KC_MNXT, KC_MPLY, _______, _______,
                                                   _______, _______, _______,                _______, _______, _______

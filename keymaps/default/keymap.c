@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_SYMBOLS] = LAYOUT(
-                               KC_BSLS, KC_LT,   KC_GT,    KC_MINS, KC_PERC,        KC_PIPE, KC_LBRC, KC_RBRC, KC_GRV,  KC_UNDS,
+                               KC_BSLS, KC_LT,   KC_GT,    KC_MINS, KC_UNDS,        KC_PIPE, KC_LBRC, KC_RBRC, KC_GRV, KC_PERC,
  LGUI_T(KC_PAST), LALT_T(KC_PPLS), LCTL_T(KC_SLSH), LSFT_T(KC_EQL), KC_AMPR,        KC_HASH, MOD_LPRN, MOD_RPRN, MOD_EXLM, MOD_QUES,
                       _______, KC_CIRC, KC_TILD, CURR_DIR, UP_DIR, HOME_DIR,        KC_AT,   KC_LCBR, KC_RCBR, KC_DLR,  RALT(KC_E), _______,
                                                   _______, _______, _______,        _______, _______, _______
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_FUNCTION] = LAYOUT(
                                        KC_F10, KC_F9, KC_F8, KC_F7, _______,        _______, KC_BRID, KC_BRIU, _______, _______,
-       LGUI_T(KC_F11), LALT_T(KC_F3), LCTL_T(KC_F2), LSFT_T(KC_F1), _______,        _______, RSFT_T(KC_KB), LCTL_T(KC_VOLU), LALT_T(KC_MUTE), LGUI_T(KC_PSCR),
+       LGUI_T(KC_F11), LALT_T(KC_F3), LCTL_T(KC_F2), LSFT_T(KC_F1), _______,        _______, RSFT_T(KC_KB_VOLUME_DOWN), LCTL_T(KC_KB_VOLUME_UP), LALT_T(KC_KB_MUTE), LGUI_T(KC_PSCR),
                               _______, KC_F12, KC_F6, KC_F5, KC_F4, _______,        _______, KC_MPRV, KC_MNXT, KC_MPLY, _______, _______,
                                                   _______, _______, _______,        _______, _______, _______
     )

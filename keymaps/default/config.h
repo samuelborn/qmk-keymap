@@ -1,9 +1,8 @@
 #pragma once
 
 #define SPLIT_USB_DETECT
+#define SPLIT_USB_TIMEOUT 5000
 
-#define TAPPING_TERM 200
+#define TAPPING_TERM 250
 #define PERMISSIVE_HOLD
 #define CHORDAL_HOLD
-
-#define USB_SUSPEND_WAKEUP_DELAY 1000

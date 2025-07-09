@@ -34,7 +34,7 @@ LGUI_T(KC_PAST), LALT_T(KC_PPLS), LCTL_T(KC_SLSH), LSFT_T(KC_EQL), KC_AMPR,     
     [_F1] = LAYOUT(
                                       KC_F10, KC_F9, KC_F8, KC_F7, _______,         KC_PERC, KC_7,         KC_8,         KC_9,         KC_CIRC,
       LGUI_T(KC_F11), LALT_T(KC_F3), LCTL_T(KC_F2), LSFT_T(KC_F1), _______,         KC_PLUS, LSFT_T(KC_1), LCTL_T(KC_2), LALT_T(KC_3), LGUI_T(KC_PAST),
-                             _______, KC_F12, KC_F6, KC_F5, KC_F4, _______,         KC_MINS, KC_4,         KC_5,         KC_6,         _______, _______,
+                             _______, KC_F12, KC_F6, KC_F5, KC_F4, _______,         KC_MINS, KC_4,         KC_5,         KC_6,         KC_SLSH, _______,
                                                  _______, _______, _______,         KC_DOT, KC_0, KC_COMM    
     ),
     

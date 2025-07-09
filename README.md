@@ -1,16 +1,10 @@
 # TOTEM QMK Keymap
 
-This is a personal [QMK](https://qmk.fm) configuration for the [TOTEM](https://github.com/GEIGEIGEIST/TOTEM) split keyboard.
-The layout is a Vim friendly version of [Gallium](https://github.com/GalileoBlues/Gallium), with additional layers inspired by [Pascal Getreuer's keymap](https://github.com/getreuer/qmk-keymap).
+This is a personal [QMK](https://qmk.fm) configuration for the [TOTEM](https://github.com/GEIGEIGEIST/TOTEM) split keyboard, using the [Gallium](https://github.com/GalileoBlues/Gallium) layout.
 
 ## Setup
 
-First, ensure QMK is set up on your system. You can do this by running:
-
-```bash
-uv tool install qmk
-qmk setup
-```
+First, ensure QMK is set up on your system. 
 
 Next, clone this repository into your QMK keyboards directory. Assuming default paths, use the following command:
 

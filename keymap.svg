@@ -746,7 +746,7 @@ path.combo {
 </g>
 <g transform="translate(271, 168)" class="key keypos-24">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<text x="0" y="0" class="key tap">MPRV</text>
+<text x="0" y="0" class="key tap">MNXT</text>
 </g>
 <g transform="translate(330, 177)" class="key trans keypos-25">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>

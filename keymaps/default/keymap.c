@@ -41,7 +41,7 @@ _______, KC_CIRC, KC_TILD,         CURR_DIR,        UP_DIR,        HOME_DIR,    
     [_L3] = LAYOUT(
 _______,         _______,         KC_BRID,         KC_BRIU,         _______,        KC_PGUP, KC_HOME, SEL_LINE, KC_END,  _______,
 LGUI_T(KC_PSCR), LALT_T(KC_MUTE), LCTL_T(KC_VOLD), RSFT_T(KC_VOLU), _______,        KC_PGDN, KC_LEFT, KC_UP,    KC_RGHT, _______,
-_______, _______, KC_MPLY,        KC_MPRV,         KC_MPRV,         _______,        _______, WRD_BCK, KC_DOWN,  WRD_FWD, _______, _______,
+_______, _______, KC_MPLY,        KC_MPRV,         KC_MNXT,         _______,        _______, WRD_BCK, KC_DOWN,  WRD_FWD, _______, _______,
                                                   _______, _______, _______,        _______, _______, _______
     )
 };

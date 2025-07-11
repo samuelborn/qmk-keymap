@@ -25,24 +25,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_L1] = LAYOUT(
-       KC_F10,         KC_F9,         KC_F8,         KC_F7,         _______,        KC_PERC, KC_7,         KC_8,         KC_9,         KC_CIRC,
-       LGUI_T(KC_F11), LALT_T(KC_F3), LCTL_T(KC_F2), LSFT_T(KC_F1), _______,        KC_PLUS, LSFT_T(KC_1), LCTL_T(KC_2), LALT_T(KC_3), LGUI_T(KC_PAST),
-      _______, KC_F12, KC_F6,         KC_F5,         KC_F4,         _______,        KC_MINS, KC_4,         KC_5,         KC_6,         KC_SLSH, _______,
-                                                  _______, _______, _______,        KC_COMM, KC_0, KC_DOT    
+       KC_F10,         KC_F9,         KC_F8,         KC_F7,         XXXXXXX,        KC_PERC, KC_7,         KC_8,         KC_9,         KC_CIRC,
+       LGUI_T(KC_F11), LALT_T(KC_F3), LCTL_T(KC_F2), LSFT_T(KC_F1), XXXXXXX,        KC_PLUS, LSFT_T(KC_1), LCTL_T(KC_2), LALT_T(KC_3), LGUI_T(KC_PAST),
+      XXXXXXX, KC_F12, KC_F6,         KC_F5,         KC_F4,         XXXXXXX,        KC_MINS, KC_4,         KC_5,         KC_6,         KC_SLSH, XXXXXXX,
+                                                  XXXXXXX, XXXXXXX, XXXXXXX,        KC_COMM, KC_0, KC_DOT    
     ),
     
     [_L2] = LAYOUT(
  KC_BSLS,         KC_LT,           KC_GT,           KC_MINS,        KC_UNDS,        KC_PIPE, KC_LBRC,         KC_RBRC,         KC_GRV,          KC_PERC,
  LGUI_T(KC_PAST), LALT_T(KC_PPLS), LCTL_T(KC_SLSH), LSFT_T(KC_EQL), KC_AMPR,        KC_HASH, RSFT_T(KC_LPRN), LCTL_T(KC_RPRN), LALT_T(KC_EXLM), LGUI_T(KC_QUES),
-_______, KC_CIRC, KC_TILD,         CURR_DIR,        UP_DIR,        HOME_DIR,        KC_AT,   KC_LCBR,         KC_RCBR,         KC_DLR,          RALT(KC_E), _______,
-                                                  _______, _______, _______,        _______, _______, _______
+XXXXXXX, KC_CIRC, KC_TILD,         CURR_DIR,        UP_DIR,        HOME_DIR,        KC_AT,   KC_LCBR,         KC_RCBR,         KC_DLR,          RALT(KC_E), XXXXXXX,
+                                                  XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
     [_L3] = LAYOUT(
-KC_PWR,          KC_SLEP,         KC_BRID,         KC_BRIU,         _______,        KC_PGUP, KC_HOME, SEL_LINE, KC_END,  _______,
-LGUI_T(KC_PSCR), LALT_T(KC_MUTE), LCTL_T(KC_VOLD), RSFT_T(KC_VOLU), _______,        KC_PGDN, KC_LEFT, KC_UP,    KC_RGHT, _______,
-_______, _______, KC_MPLY,        KC_MPRV,         KC_MNXT,         _______,        _______, WRD_BCK, KC_DOWN,  WRD_FWD, _______, _______,
-                                                  _______, _______, _______,        _______, _______, _______
+KC_PWR,          KC_SLEP,         KC_BRID,         KC_BRIU,         XXXXXXX,        KC_PGUP, KC_HOME, SEL_LINE, KC_END,  XXXXXXX,
+LGUI_T(KC_PSCR), LALT_T(KC_MUTE), LCTL_T(KC_VOLD), RSFT_T(KC_VOLU), XXXXXXX,        KC_PGDN, KC_LEFT, KC_UP,    KC_RGHT, XXXXXXX,
+XXXXXXX, XXXXXXX, KC_MPLY,        KC_MPRV,         KC_MNXT,         XXXXXXX,        XXXXXXX, WRD_BCK, KC_DOWN,  WRD_FWD, XXXXXXX, XXXXXXX,
+                                                  XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX, XXXXXXX
     )
 };
 

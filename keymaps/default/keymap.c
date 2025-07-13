@@ -5,6 +5,7 @@ enum layers {
     _L1,
     _L2,
     _L3,
+    _L4,
 };
 
 enum custom_keycodes {
@@ -20,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_L0] = LAYOUT(
                        KC_B, KC_L,         KC_D,         KC_C,         KC_V,        KC_J,    KC_F,         KC_O,         KC_U,            KC_DOT,
                LGUI_T(KC_N), LALT_T(KC_R), LCTL_T(KC_T), LSFT_T(KC_S), KC_G,        KC_Y,    RSFT_T(KC_H), LCTL_T(KC_A), LALT_T(KC_E),    LGUI_T(KC_I),
-              KC_LGUI, KC_Q, RALT_T(KC_X), KC_M,         KC_W,         KC_Z,        KC_K,    KC_P,         KC_QUOT,      RALT_T(KC_SCLN), KC_COMM, KC_LGUI,
+              KC_LGUI, KC_Q, RALT_T(KC_X), KC_M,         KC_W,         KC_Z,        KC_K,    KC_P,         KC_QUOT,      RALT_T(KC_SCLN), KC_COMM, TG(_L4),
                           LT(_L1, KC_TAB), LT(_L2, KC_SPC), LT(_L3, KC_ENT),        LT(_L3, KC_ESC), LT(_L2, KC_BSPC), LT(_L1, KC_DEL)
     ),
 
@@ -43,6 +44,14 @@ KC_PWR,          KC_SLEP,         KC_BRID,         KC_BRIU,         XXXXXXX,    
 LGUI_T(KC_PSCR), LALT_T(KC_MUTE), LCTL_T(KC_VOLD), RSFT_T(KC_VOLU), XXXXXXX,        KC_PGDN, KC_LEFT, KC_UP,    KC_RGHT, XXXXXXX,
 XXXXXXX, XXXXXXX, KC_MPLY,        KC_MPRV,         KC_MNXT,         XXXXXXX,        XXXXXXX, WRD_BCK, KC_DOWN,  WRD_FWD, XXXXXXX, XXXXXXX,
                                                   XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX, XXXXXXX
+    ),
+
+    // Disable home row mods: useful for gaming
+    [_L4] = LAYOUT(
+                                               KC_B, KC_L, KC_D, KC_C, KC_V,        KC_J, KC_F, KC_O, KC_U, KC_DOT,
+                                               KC_N, KC_R, KC_T, KC_S, KC_G,        KC_Y, KC_H, KC_A, KC_E, KC_I,
+                                KC_LGUI, KC_Q, KC_X, KC_M, KC_W, KC_Z, KC_K,        KC_P, KC_QUOT, KC_SCLN, KC_COMM, TG(_L4),
+                                                     KC_TAB, KC_SPC, KC_ENT,        KC_ESC, KC_BSPC, KC_DEL
     )
 };
 

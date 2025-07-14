@@ -9,3 +9,6 @@
 #define TAPPING_TERM 250
 #define PERMISSIVE_HOLD
 #define CHORDAL_HOLD
+
+// Better Caps Lock handling
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD

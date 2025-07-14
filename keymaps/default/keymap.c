@@ -22,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                        KC_B, KC_L,         KC_D,         KC_C,         KC_V,        KC_J,    KC_F,         KC_O,         KC_U,            KC_DOT,
                LGUI_T(KC_N), LALT_T(KC_R), LCTL_T(KC_T), LSFT_T(KC_S), KC_G,        KC_Y,    RSFT_T(KC_H), LCTL_T(KC_A), LALT_T(KC_E),    LGUI_T(KC_I),
               KC_LGUI, KC_Q, RALT_T(KC_X), KC_M,         KC_W,         KC_Z,        KC_K,    KC_P,         KC_QUOT,      RALT_T(KC_SCLN), KC_COMM, TG(_L4),
-                          LT(_L1, KC_TAB), LT(_L2, KC_SPC), LT(_L3, KC_ENT),        LT(_L3, KC_ESC), LT(_L2, KC_BSPC), LT(_L1, KC_DEL)
+                          LT(_L1, KC_TAB), LT(_L2, KC_SPC), LT(_L3, KC_ESC),        LT(_L3, KC_ENT), LT(_L2, KC_BSPC), LT(_L1, KC_DEL)
     ),
 
     [_L1] = LAYOUT(
@@ -51,7 +51,7 @@ XXXXXXX, XXXXXXX, KC_MPLY,        KC_MPRV,         KC_MNXT,         XXXXXXX,    
                                                KC_B, KC_L, KC_D, KC_C, KC_V,        KC_J, KC_F, KC_O, KC_U, KC_DOT,
                                                KC_N, KC_R, KC_T, KC_S, KC_G,        KC_Y, KC_H, KC_A, KC_E, KC_I,
                                 KC_LGUI, KC_Q, KC_X, KC_M, KC_W, KC_Z, KC_K,        KC_P, KC_QUOT, KC_SCLN, KC_COMM, TG(_L4),
-                                                     KC_TAB, KC_SPC, KC_ENT,        KC_ESC, KC_BSPC, KC_DEL
+                                                     KC_TAB, KC_SPC, KC_ESC,        KC_ENT, KC_BSPC, KC_DEL
     )
 };
 

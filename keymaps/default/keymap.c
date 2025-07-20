@@ -40,9 +40,9 @@ XXXXXXX, KC_CIRC, KC_TILD,         CURR_DIR,        UP_DIR,        HOME_DIR,    
     ),
 
     [_L3] = LAYOUT(
-KC_PWR,          KC_SLEP,         KC_BRID,         KC_BRIU,         XXXXXXX,        KC_PGUP, KC_HOME, SEL_LINE, KC_END,  XXXXXXX,
+XXXXXXX,         XXXXXXX,         KC_BRID,         KC_BRIU,         XXXXXXX,        KC_PGUP, KC_HOME, SEL_LINE, KC_END,  XXXXXXX,
 LGUI_T(KC_PSCR), LALT_T(KC_MUTE), LCTL_T(KC_VOLD), RSFT_T(KC_VOLU), XXXXXXX,        KC_PGDN, KC_LEFT, KC_UP,    KC_RGHT, XXXXXXX,
-XXXXXXX, XXXXXXX, KC_MPLY,        KC_MPRV,         KC_MNXT,         XXXXXXX,        XXXXXXX, WRD_BCK, KC_DOWN,  WRD_FWD, XXXXXXX, XXXXXXX,
+KC_PWR, KC_SLEP, KC_MPLY,         KC_MPRV,         KC_MNXT,         XXXXXXX,        XXXXXXX, WRD_BCK, KC_DOWN,  WRD_FWD, XXXXXXX, XXXXXXX,
                                                   XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX, XXXXXXX
     ),
 

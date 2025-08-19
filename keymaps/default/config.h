@@ -6,7 +6,7 @@
 #define SPLIT_USB_TIMEOUT 5000
 
 // Better settings for home row mods
-#define TAPPING_TERM 250
+#define TAPPING_TERM 200
 #define PERMISSIVE_HOLD
 #define CHORDAL_HOLD
 

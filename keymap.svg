@@ -571,19 +571,19 @@ path.combo {
 <g transform="translate(212, 140)" class="key keypos-23">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">CURR</tspan><tspan x="0" dy="1.2em">DIR</tspan>
+<tspan x="0" dy="-0.6em">HOME</tspan><tspan x="0" dy="1.2em">DIR</tspan>
 </text>
 </g>
 <g transform="translate(271, 168)" class="key keypos-24">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">UP</tspan><tspan x="0" dy="1.2em">DIR</tspan>
+<tspan x="0" dy="-0.6em">CURR</tspan><tspan x="0" dy="1.2em">DIR</tspan>
 </text>
 </g>
 <g transform="translate(330, 177)" class="key keypos-25">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">HOME</tspan><tspan x="0" dy="1.2em">DIR</tspan>
+<tspan x="0" dy="-0.6em">UP</tspan><tspan x="0" dy="1.2em">DIR</tspan>
 </text>
 </g>
 <g transform="translate(520, 177)" class="key keypos-26">

@@ -31,11 +31,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX, KC_F12, KC_F6,         KC_F5,         KC_F4,         XXXXXXX,        KC_COMM, KC_4,         KC_5,         KC_6,         KC_ASTR, KC_SLSH,
                                                   _______, _______, _______,        _______, _______, _______
     ),
-    
+
     [_L2] = LAYOUT(
  KC_BSLS,         KC_LT,           KC_GT,           KC_MINS,        KC_UNDS,        KC_PIPE, KC_LBRC,         KC_RBRC,         KC_GRV,          KC_PERC,
  LGUI_T(KC_PAST), LALT_T(KC_PPLS), LCTL_T(KC_SLSH), LSFT_T(KC_EQL), KC_AMPR,        KC_HASH, RSFT_T(KC_LPRN), LCTL_T(KC_RPRN), LALT_T(KC_EXLM), LGUI_T(KC_QUES),
-XXXXXXX, KC_CIRC, KC_TILD,         CURR_DIR,        UP_DIR,        HOME_DIR,        KC_AT,   KC_LCBR,         KC_RCBR,         KC_DLR,          RALT(KC_E), XXXXXXX,
+XXXXXXX, KC_CIRC, KC_TILD,         HOME_DIR,        CURR_DIR,        UP_DIR,        KC_AT,   KC_LCBR,         KC_RCBR,         KC_DLR,          RALT(KC_E), XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),
 
@@ -77,7 +77,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case SEL_LINE:
                 tap_code(KC_HOME);
                 tap_code16(LSFT(KC_END));
-                return false;  
+                return false;
 
             // Workaround for mod tap with non basic keycodes
             case RSFT_T(KC_LPRN):
@@ -89,19 +89,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case LCTL_T(KC_RPRN):
                 if (record->tap.count && record->event.pressed) {
                     tap_code16(KC_RPRN);
-                    return false;  
+                    return false;
                 }
                 break;
             case LALT_T(KC_EXLM):
                 if (record->tap.count && record->event.pressed) {
                     tap_code16(KC_EXLM);
-                    return false;  
+                    return false;
                 }
                 break;
             case LGUI_T(KC_QUES):
                 if (record->tap.count && record->event.pressed) {
                     tap_code16(KC_QUES);
-                    return false;  
+                    return false;
                 }
                 break;
         }

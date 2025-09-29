@@ -12,8 +12,6 @@ enum custom_keycodes {
     UP_DIR = SAFE_RANGE,
     CURR_DIR,
     HOME_DIR,
-    WRD_FWD,
-    WRD_BCK,
     SEL_LINE,
 };
 
@@ -42,7 +40,7 @@ XXXXXXX, KC_CIRC, KC_TILD,         HOME_DIR,        CURR_DIR,        UP_DIR,    
     [_L3] = LAYOUT(
 XXXXXXX,         XXXXXXX,         KC_BRID,         KC_BRIU,         XXXXXXX,        KC_PGUP, KC_HOME, SEL_LINE, KC_END,  XXXXXXX,
 LGUI_T(KC_PSCR), LALT_T(KC_MUTE), LCTL_T(KC_VOLD), RSFT_T(KC_VOLU), XXXXXXX,        KC_PGDN, KC_LEFT, KC_UP,    KC_RGHT, XXXXXXX,
-KC_PWR, KC_SLEP, KC_MPLY,         KC_MPRV,         KC_MNXT,         XXXXXXX,        XXXXXXX, WRD_BCK, KC_DOWN,  WRD_FWD, XXXXXXX, XXXXXXX,
+KC_PWR, KC_SLEP, KC_MPLY,         KC_MPRV,         KC_MNXT,         XXXXXXX,        XXXXXXX, LCTL(KC_LEFT), KC_DOWN,  LCTL(KC_RIGHT), XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),
 
@@ -67,12 +65,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 return false;
             case HOME_DIR:
                 send_string("~/");
-                return false;
-            case WRD_FWD:
-                tap_code16(LCTL(KC_RGHT));
-                return false;
-            case WRD_BCK:
-                tap_code16(LCTL(KC_LEFT));
                 return false;
             case SEL_LINE:
                 tap_code(KC_HOME);

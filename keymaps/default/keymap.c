@@ -37,9 +37,9 @@ XXXXXXX, KC_CIRC, KC_TILD,         RALT(KC_E),      KC_DLR,         XXXXXXX,    
     ),
 
     [_L3] = LAYOUT(
-KC_GRV,          KC_BSLS,         KC_RBRC,         KC_LBRC,         KC_PIPE,        KC_PGUP, KC_HOME,       SEL_LINE, KC_END,         XXXXXXX,
-LGUI_T(KC_QUES), LALT_T(KC_EXLM), LCTL_T(KC_RPRN), RSFT_T(KC_LPRN), KC_HASH,        KC_PGDN, KC_LEFT,       KC_UP,    KC_RGHT,        XXXXXXX,
-XXXXXXX, UP_DIR, HOME_DIR,        KC_RCBR,         KC_LCBR,           KC_AT,        XXXXXXX, LCTL(KC_LEFT), KC_DOWN,  LCTL(KC_RIGHT), XXXXXXX, XXXXXXX,
+KC_GRV,          KC_BSLS,         KC_LBRC,         KC_RBRC,         KC_PIPE,        KC_PGUP, KC_HOME,       SEL_LINE, KC_END,         XXXXXXX,
+LGUI_T(KC_QUES), LALT_T(KC_EXLM), LCTL_T(KC_LPRN), RSFT_T(KC_RPRN), KC_HASH,        KC_PGDN, KC_LEFT,       KC_UP,    KC_RGHT,        XXXXXXX,
+XXXXXXX, UP_DIR, HOME_DIR,        KC_LCBR,         KC_RCBR,           KC_AT,        XXXXXXX, LCTL(KC_LEFT), KC_DOWN,  LCTL(KC_RIGHT), XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),
     // clang-format on

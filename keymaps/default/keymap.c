@@ -7,6 +7,10 @@ enum layers {
     _L3,
 };
 
+enum custom_keycodes {
+    HOME = SAFE_RANGE,
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off
     [_L0] = LAYOUT(
@@ -33,7 +37,7 @@ XXXXXXX, KC_CIRC, KC_PERC,         RALT(KC_E),      KC_DLR,         KC_PIPE,    
     [_L3] = LAYOUT(
         XXXXXXX, KC_BSLS,         KC_LBRC,         KC_RBRC,          KC_GRV,        KC_PGUP, KC_HOME,       XXXXXXX,  KC_END,         XXXXXXX,
 LGUI_T(KC_QUES), LALT_T(KC_EXLM), LCTL_T(KC_LPRN), RSFT_T(KC_RPRN), KC_HASH,        KC_PGDN, KC_LEFT,       KC_UP,    KC_RGHT,        XXXXXXX,
-XXXXXXX, XXXXXXX, KC_TILD,        KC_LCBR,         KC_RCBR,           KC_AT,        XXXXXXX, LCTL(KC_LEFT), KC_DOWN,  LCTL(KC_RIGHT), XXXXXXX, XXXXXXX,
+XXXXXXX,   HOME, KC_TILD,         KC_LCBR,         KC_RCBR,           KC_AT,        XXXXXXX, LCTL(KC_LEFT), KC_DOWN,  LCTL(KC_RIGHT), XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),
     // clang-format on
@@ -42,6 +46,10 @@ XXXXXXX, XXXXXXX, KC_TILD,        KC_LCBR,         KC_RCBR,           KC_AT,    
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
+            case HOME:
+                send_string("~/");
+                return false;
+
             // Workaround for mod tap with non basic keycodes
             case RSFT_T(KC_RPRN):
                 if (record->tap.count && record->event.pressed) {

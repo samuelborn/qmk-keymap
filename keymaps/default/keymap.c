@@ -26,12 +26,12 @@ KC_PWR, KC_SLEP, KC_MPLY,         KC_MPRV,         KC_MNXT,         XXXXXXX,    
     [_L2] = LAYOUT(
          XXXXXXX, KC_LT,           KC_GT,           KC_MINS,        KC_UNDS,        KC_COLN, KC_7,         KC_8,         KC_9,         XXXXXXX,
  LGUI_T(KC_PAST), LALT_T(KC_PPLS), LCTL_T(KC_SLSH), LSFT_T(KC_EQL), KC_AMPR,        KC_DOT,  LSFT_T(KC_1), LCTL_T(KC_2), LALT_T(KC_3), LGUI_T(KC_0),
-XXXXXXX, KC_CIRC, KC_PERC,         RALT(KC_E),      KC_DLR,         XXXXXXX,        KC_COMM, KC_4,         KC_5,         KC_6,         XXXXXXX, XXXXXXX,
+XXXXXXX, KC_CIRC, KC_PERC,         RALT(KC_E),      KC_DLR,         KC_PIPE,        KC_COMM, KC_4,         KC_5,         KC_6,         XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),
 
     [_L3] = LAYOUT(
-         KC_GRV, KC_BSLS,         KC_LBRC,         KC_RBRC,         KC_PIPE,        KC_PGUP, KC_HOME,       XXXXXXX,  KC_END,         XXXXXXX,
+        XXXXXXX, KC_BSLS,         KC_LBRC,         KC_RBRC,          KC_GRV,        KC_PGUP, KC_HOME,       XXXXXXX,  KC_END,         XXXXXXX,
 LGUI_T(KC_QUES), LALT_T(KC_EXLM), LCTL_T(KC_LPRN), RSFT_T(KC_RPRN), KC_HASH,        KC_PGDN, KC_LEFT,       KC_UP,    KC_RGHT,        XXXXXXX,
 XXXXXXX, XXXXXXX, KC_TILD,        KC_LCBR,         KC_RCBR,           KC_AT,        XXXXXXX, LCTL(KC_LEFT), KC_DOWN,  LCTL(KC_RIGHT), XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______

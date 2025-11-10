@@ -43,13 +43,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
             // Workaround for mod tap with non basic keycodes
-            case RSFT_T(KC_LPRN):
+            case RSFT_T(KC_RPRN):
                 if (record->tap.count && record->event.pressed) {
                     tap_code16(KC_LPRN);
                     return false;
                 }
                 break;
-            case LCTL_T(KC_RPRN):
+            case LCTL_T(KC_LPRN):
                 if (record->tap.count && record->event.pressed) {
                     tap_code16(KC_RPRN);
                     return false;

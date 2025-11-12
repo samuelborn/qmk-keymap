@@ -11,12 +11,16 @@ enum custom_keycodes {
     HOME = SAFE_RANGE,
 };
 
-const uint16_t PROGMEM copy_combo[] = {KC_D, KC_C, COMBO_END};
-const uint16_t PROGMEM paste_combo[] = {KC_L, KC_D, COMBO_END};
+const uint16_t PROGMEM paste[] = {KC_L, KC_D, COMBO_END};
+const uint16_t PROGMEM copy[] = {KC_D, KC_C, COMBO_END};
+const uint16_t PROGMEM search[] = {KC_F, KC_O, COMBO_END};
+const uint16_t PROGMEM select_all[] = {KC_O, KC_U, COMBO_END};
 
 combo_t key_combos[] = {
-    COMBO(copy_combo, LCTL(KC_C)),
-    COMBO(paste_combo, LCTL(KC_V)),
+    COMBO(paste, LCTL(KC_V)),
+    COMBO(copy, LCTL(KC_C)),
+    COMBO(search, LCTL(KC_F)),
+    COMBO(select_all, LCTL(KC_A)),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {

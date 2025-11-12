@@ -21,15 +21,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_L1] = LAYOUT(
-        XXXXXXX, XXXXXXX,         KC_BRID,         KC_BRIU,         XXXXXXX,        XXXXXXX, KC_F7,         KC_F8,         KC_F9,         KC_F10,
-LGUI_T(KC_PSCR), LALT_T(KC_MUTE), LCTL_T(KC_VOLD), RSFT_T(KC_VOLU), XXXXXXX,        XXXXXXX, LSFT_T(KC_F1), LCTL_T(KC_F2), LALT_T(KC_F3), LGUI_T(KC_F11),
-KC_PWR, KC_SLEP, KC_MPLY,         KC_MPRV,         KC_MNXT,         XXXXXXX,        XXXXXXX, KC_F4,         KC_F5,         KC_F6,         KC_F12, XXXXXXX,
+        XXXXXXX, XXXXXXX,         KC_BRID,         KC_BRIU,         XXXXXXX,        KC_F10, KC_F7,   KC_F8,         KC_F9,         XXXXXXX,
+LGUI_T(KC_PSCR), LALT_T(KC_MUTE), LCTL_T(KC_VOLD), RSFT_T(KC_VOLU), XXXXXXX,        KC_F11, KC_RSFT, LCTL_T(KC_F1), LALT_T(KC_F2), LGUI_T(KC_F3),
+KC_PWR, KC_SLEP, KC_MPLY,         KC_MPRV,         KC_MNXT,         XXXXXXX,        KC_F12, KC_F4,   KC_F5,         KC_F6,         XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),
 
     [_L2] = LAYOUT(
          XXXXXXX, KC_LT,           KC_GT,           KC_MINS,        KC_UNDS,        KC_COLN, KC_7,         KC_8,         KC_9,         XXXXXXX,
- LGUI_T(KC_PAST), LALT_T(KC_PPLS), LCTL_T(KC_SLSH), LSFT_T(KC_EQL), KC_AMPR,        KC_DOT,  LSFT_T(KC_1), LCTL_T(KC_2), LALT_T(KC_3), LGUI_T(KC_0),
+ LGUI_T(KC_PAST), LALT_T(KC_PPLS), LCTL_T(KC_SLSH), LSFT_T(KC_EQL), KC_AMPR,        KC_DOT,  LSFT_T(KC_0), LCTL_T(KC_1), LALT_T(KC_2), LGUI_T(KC_3),
 XXXXXXX, KC_CIRC, KC_PERC,         RALT(KC_E),      KC_DLR,         KC_PIPE,        KC_COMM, KC_4,         KC_5,         KC_6,         XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),

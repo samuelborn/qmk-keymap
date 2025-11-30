@@ -9,18 +9,17 @@ enum layers {
 
 enum custom_keycodes {
     HOME = SAFE_RANGE,
+    SEL_LINE,
 };
 
-const uint16_t PROGMEM paste[] = {KC_L, KC_D, COMBO_END};
-const uint16_t PROGMEM copy[] = {KC_D, KC_C, COMBO_END};
-const uint16_t PROGMEM search[] = {KC_F, KC_O, COMBO_END};
+const uint16_t PROGMEM cut[]        = {KC_B, KC_L, COMBO_END};
+const uint16_t PROGMEM copy[]       = {KC_L, KC_D, COMBO_END};
+const uint16_t PROGMEM paste[]      = {KC_D, KC_C, COMBO_END};
+const uint16_t PROGMEM search[]     = {KC_F, KC_O, COMBO_END};
 const uint16_t PROGMEM select_all[] = {KC_O, KC_U, COMBO_END};
 
 combo_t key_combos[] = {
-    COMBO(paste, LCTL(KC_V)),
-    COMBO(copy, LCTL(KC_C)),
-    COMBO(search, LCTL(KC_F)),
-    COMBO(select_all, LCTL(KC_A)),
+    COMBO(cut, LCTL(KC_X)), COMBO(copy, LCTL(KC_C)), COMBO(paste, LCTL(KC_V)), COMBO(search, LCTL(KC_F)), COMBO(select_all, LCTL(KC_A)),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -47,7 +46,7 @@ XXXXXXX, KC_CIRC, KC_PERC,         RALT(KC_E),      KC_DLR,         KC_PIPE,    
     ),
 
     [_L3] = LAYOUT(
-        XXXXXXX, KC_BSLS,         KC_LBRC,         KC_RBRC,          KC_GRV,        KC_PGUP, KC_HOME,       XXXXXXX,  KC_END,         XXXXXXX,
+        XXXXXXX, KC_BSLS,         KC_LBRC,         KC_RBRC,          KC_GRV,        KC_PGUP, KC_HOME,       SEL_LINE, KC_END,         XXXXXXX,
 LGUI_T(KC_QUES), LALT_T(KC_EXLM), LCTL_T(KC_LPRN), RSFT_T(KC_RPRN), KC_HASH,        KC_PGDN, KC_LEFT,       KC_UP,    KC_RGHT,        XXXXXXX,
 XXXXXXX,   HOME, KC_TILD,         KC_LCBR,         KC_RCBR,           KC_AT,        XXXXXXX, LCTL(KC_LEFT), KC_DOWN,  LCTL(KC_RIGHT), XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
@@ -60,6 +59,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         switch (keycode) {
             case HOME:
                 send_string("~/");
+                return false;
+            case SEL_LINE:
+                if (record->event.pressed) {
+                    tap_code(KC_HOME);
+                    register_code(KC_LSFT);
+                    tap_code(KC_END);
+                    unregister_code(KC_LSFT);
+                }
                 return false;
 
             // Workaround for mod tap with non basic keycodes

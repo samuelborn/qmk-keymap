@@ -1,10 +1,10 @@
 #include QMK_KEYBOARD_H
 
 enum layers {
-    _L0,
-    _L1,
-    _L2,
-    _L3,
+    BASE,
+    FUNC,
+    NUM,
+    NAV,
 };
 
 enum custom_keycodes {
@@ -24,31 +24,31 @@ combo_t key_combos[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off
-    [_L0] = LAYOUT(
+    [BASE] = LAYOUT(
                        KC_B, KC_L,         KC_D,         KC_C,         KC_V,        KC_J,    KC_F,         KC_O,         KC_U,            KC_DOT,
                LGUI_T(KC_N), LALT_T(KC_R), LCTL_T(KC_T), LSFT_T(KC_S), KC_G,        KC_Y,    RSFT_T(KC_H), LCTL_T(KC_A), LALT_T(KC_E),    LGUI_T(KC_I),
               KC_LGUI, KC_Q, KC_X,         KC_M,         RALT_T(KC_W), KC_Z,        KC_K,    RALT_T(KC_P), KC_QUOT,      KC_SCLN, KC_COMM, KC_LGUI,
-                          LT(_L1, KC_TAB), LT(_L2, KC_SPC), LT(_L3, KC_ESC),        LT(_L3, KC_ENT), LT(_L2, KC_BSPC), LT(_L1, KC_DEL)
+                         LT(FUNC, KC_TAB), LT(NUM, KC_SPC), LT(NAV, KC_ESC),        LT(NAV, KC_ENT), LT(NUM, KC_BSPC), LT(FUNC, KC_DEL)
     ),
 
-    [_L1] = LAYOUT(
+    [FUNC] = LAYOUT(
         XXXXXXX, XXXXXXX,         KC_BRID,         KC_BRIU,         XXXXXXX,        KC_F10, KC_F7,   KC_F8, KC_F9, XXXXXXX,
 LGUI_T(KC_PSCR), LALT_T(KC_MUTE), LCTL_T(KC_VOLD), RSFT_T(KC_VOLU), XXXXXXX,        KC_F11, XXXXXXX, KC_F1, KC_F2, KC_F3,
 KC_PWR, KC_SLEP, KC_MPLY,         KC_MPRV,         KC_MNXT,         XXXXXXX,        KC_F12, KC_F4,   KC_F5, KC_F6, XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),
 
-    [_L2] = LAYOUT(
-         XXXXXXX, KC_LT,           KC_GT,           KC_MINS,        KC_UNDS,        KC_COLN, KC_7,         KC_8,         KC_9,         XXXXXXX,
- LGUI_T(KC_PAST), LALT_T(KC_PPLS), LCTL_T(KC_SLSH), LSFT_T(KC_EQL), KC_AMPR,        KC_DOT,  LSFT_T(KC_0), LCTL_T(KC_1), LALT_T(KC_2), LGUI_T(KC_3),
-XXXXXXX, KC_CIRC, KC_PERC,         RALT(KC_E),      KC_DLR,         KC_PIPE,        KC_COMM, KC_4,         KC_5,         KC_6,         XXXXXXX, XXXXXXX,
+    [NUM] = LAYOUT(
+         XXXXXXX, KC_MINS,         KC_LT,           KC_GT,          KC_UNDS,        KC_COLN, KC_7,         KC_8,         KC_9,         XXXXXXX,
+ LGUI_T(KC_PAST), LALT_T(KC_PPLS), LCTL_T(KC_SLSH), LSFT_T(KC_EQL),  KC_DLR,        KC_DOT,  LSFT_T(KC_0), LCTL_T(KC_1), LALT_T(KC_2), LGUI_T(KC_3),
+XXXXXXX, KC_CIRC, KC_PERC,         KC_EXLM,         KC_QUES,     RALT(KC_5),        KC_COMM, KC_4,         KC_5,         KC_6,         XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),
 
-    [_L3] = LAYOUT(
+    [NAV] = LAYOUT(
         XXXXXXX, KC_BSLS,         KC_LBRC,         KC_RBRC,          KC_GRV,        KC_PGUP, KC_HOME,       SEL_LINE, KC_END,         XXXXXXX,
-LGUI_T(KC_QUES), LALT_T(KC_EXLM), LCTL_T(KC_LPRN), RSFT_T(KC_RPRN), KC_HASH,        KC_PGDN, KC_LEFT,       KC_UP,    KC_RGHT,        XXXXXXX,
-XXXXXXX,   HOME, KC_TILD,         KC_LCBR,         KC_RCBR,           KC_AT,        XXXXXXX, LCTL(KC_LEFT), KC_DOWN,  LCTL(KC_RIGHT), XXXXXXX, XXXXXXX,
+LGUI_T(KC_PIPE), LALT_T(KC_AMPR), LCTL_T(KC_LPRN), RSFT_T(KC_RPRN), KC_HASH,        KC_PGDN, KC_LEFT,       KC_UP,    KC_RGHT,        XXXXXXX,
+XXXXXXX, KC_TILD, HOME,           KC_LCBR,         KC_RCBR,           KC_AT,        XXXXXXX, LCTL(KC_LEFT), KC_DOWN,  LCTL(KC_RIGHT), XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),
     // clang-format on
@@ -82,15 +82,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     return false;
                 }
                 break;
-            case LALT_T(KC_EXLM):
+            case LALT_T(KC_AMPR):
                 if (record->tap.count && record->event.pressed) {
-                    tap_code16(KC_EXLM);
+                    tap_code16(KC_AMPR);
                     return false;
                 }
                 break;
-            case LGUI_T(KC_QUES):
+            case LGUI_T(KC_PIPE):
                 if (record->tap.count && record->event.pressed) {
-                    tap_code16(KC_QUES);
+                    tap_code16(KC_PIPE);
                     return false;
                 }
                 break;

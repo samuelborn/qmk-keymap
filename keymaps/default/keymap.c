@@ -39,9 +39,9 @@ KC_PWR, KC_SLEP, KC_MPLY,         KC_MPRV,         KC_MNXT,         XXXXXXX,    
     ),
 
     [NUM] = LAYOUT(
-         XXXXXXX, KC_MINS,         KC_LT,           KC_GT,          KC_UNDS,        KC_COLN, KC_7,         KC_8,         KC_9,         XXXXXXX,
- LGUI_T(KC_PAST), LALT_T(KC_PPLS), LCTL_T(KC_SLSH), LSFT_T(KC_EQL),  KC_DLR,        KC_DOT,  LSFT_T(KC_0), LCTL_T(KC_1), LALT_T(KC_2), LGUI_T(KC_3),
-XXXXXXX, KC_CIRC, KC_PERC,         KC_EXLM,         KC_QUES,     RALT(KC_5),        KC_COMM, KC_4,         KC_5,         KC_6,         XXXXXXX, XXXXXXX,
+         XXXXXXX, KC_MINS,         KC_LT,           KC_GT,       RALT(KC_5),        KC_COLN, KC_7,         KC_8,         KC_9,         XXXXXXX,
+ LGUI_T(KC_PAST), LALT_T(KC_PPLS), LCTL_T(KC_SLSH), LSFT_T(KC_EQL), KC_UNDS,        KC_DOT,  LSFT_T(KC_0), LCTL_T(KC_1), LALT_T(KC_2), LGUI_T(KC_3),
+XXXXXXX, KC_CIRC, KC_PERC,         KC_EXLM,         KC_QUES,         KC_DLR,        KC_COMM, KC_4,         KC_5,         KC_6,         XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),
 

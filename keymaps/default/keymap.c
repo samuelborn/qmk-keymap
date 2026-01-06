@@ -98,3 +98,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }
+
+bool caps_word_press_user(uint16_t keycode) {
+    switch (keycode) {
+        // Keycodes that continue Caps Word
+        case KC_A ... KC_Z:
+            add_weak_mods(MOD_BIT(KC_LSFT));
+            return true;
+        case KC_1 ... KC_0:
+        case KC_MINS:
+        case KC_UNDS:
+        case KC_BSPC:
+        case KC_DEL:
+            return true;
+
+        default:
+            return false; // Deactivate Caps Word.
+    }
+}

@@ -25,5 +25,6 @@ qmk flash -kb totem -km default -bl uf2-split-right
 ## Visualization
 
 The graphic below is generated with [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
+Not documented in this graphic are combos and [Caps Word](https://docs.qmk.fm/features/caps_word).
 
 ![Visualization of the layout](keymap.svg)

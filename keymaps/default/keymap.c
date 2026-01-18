@@ -63,39 +63,35 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 send_string("~/");
                 return false;
             case SEL_LINE:
-                if (record->event.pressed) {
-                    tap_code(KC_HOME);
-                    tap_code16(LSFT(KC_END));
-                }
+                tap_code(KC_HOME);
+                tap_code16(LSFT(KC_END));
                 return false;
             case COPY_ALL:
-                if (record->event.pressed) {
-                    tap_code16(LCTL(KC_A));
-                    tap_code16(LCTL(KC_C));
-                }
+                tap_code16(LCTL(KC_A));
+                tap_code16(LCTL(KC_C));
                 return false;
 
             // Workaround for mod tap with non basic keycodes
             case RSFT_T(KC_RPRN):
-                if (record->tap.count && record->event.pressed) {
+                if (record->tap.count) {
                     tap_code16(KC_RPRN);
                     return false;
                 }
                 break;
             case LCTL_T(KC_LPRN):
-                if (record->tap.count && record->event.pressed) {
+                if (record->tap.count) {
                     tap_code16(KC_LPRN);
                     return false;
                 }
                 break;
             case LALT_T(KC_AMPR):
-                if (record->tap.count && record->event.pressed) {
+                if (record->tap.count) {
                     tap_code16(KC_AMPR);
                     return false;
                 }
                 break;
             case LGUI_T(KC_PIPE):
-                if (record->tap.count && record->event.pressed) {
+                if (record->tap.count) {
                     tap_code16(KC_PIPE);
                     return false;
                 }

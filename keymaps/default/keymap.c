@@ -9,7 +9,7 @@ enum layers {
 
 enum custom_keycodes {
     HOME = SAFE_RANGE,
-    SEL_LINE,
+    DEL_END,
     COPY_ALL,
 };
 
@@ -48,7 +48,7 @@ XXXXXXX, KC_CIRC, KC_PERC,         KC_EXLM,         KC_QUES,         KC_DLR,    
     ),
 
     [NAV] = LAYOUT(
-        XXXXXXX, KC_BSLS,         KC_LBRC,         KC_RBRC,          KC_GRV,        KC_PGUP, KC_HOME,       SEL_LINE, KC_END,         XXXXXXX,
+        XXXXXXX, KC_BSLS,         KC_LBRC,         KC_RBRC,          KC_GRV,        KC_PGUP, KC_HOME,       DEL_END,  KC_END,         XXXXXXX,
 LGUI_T(KC_PIPE), LALT_T(KC_AMPR), LCTL_T(KC_LPRN), RSFT_T(KC_RPRN), KC_HASH,        KC_PGDN, KC_LEFT,       KC_UP,    KC_RGHT,        XXXXXXX,
 XXXXXXX, KC_TILD, HOME,           KC_LCBR,         KC_RCBR,           KC_AT,        XXXXXXX, LCTL(KC_LEFT), KC_DOWN,  LCTL(KC_RIGHT), XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
@@ -62,9 +62,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case HOME:
                 send_string("~/");
                 return false;
-            case SEL_LINE:
-                tap_code(KC_HOME);
+            case DEL_END:
                 tap_code16(LSFT(KC_END));
+                tap_code(KC_DEL);
                 return false;
             case COPY_ALL:
                 tap_code16(LCTL(KC_A));

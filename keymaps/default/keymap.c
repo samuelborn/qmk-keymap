@@ -11,6 +11,7 @@ enum custom_keycodes {
     HOME = SAFE_RANGE,
     DEL_END,
     COPY_ALL,
+    CUT_ALL,
 };
 
 const uint16_t PROGMEM cut[]        = {KC_X, KC_M, COMBO_END};
@@ -19,9 +20,10 @@ const uint16_t PROGMEM paste[]      = {KC_D, KC_C, COMBO_END};
 const uint16_t PROGMEM search[]     = {KC_F, KC_O, COMBO_END};
 const uint16_t PROGMEM select_all[] = {KC_O, KC_U, COMBO_END};
 const uint16_t PROGMEM copy_all[]   = {KC_M, RALT_T(KC_W), COMBO_END};
+const uint16_t PROGMEM cut_all[]    = {KC_X, KC_M, RALT_T(KC_W), COMBO_END};
 
 combo_t key_combos[] = {
-    COMBO(cut, LCTL(KC_X)), COMBO(copy, LCTL(KC_C)), COMBO(paste, LCTL(KC_V)), COMBO(search, LCTL(KC_F)), COMBO(select_all, LCTL(KC_A)), COMBO(copy_all, COPY_ALL),
+    COMBO(cut, LCTL(KC_X)), COMBO(copy, LCTL(KC_C)), COMBO(paste, LCTL(KC_V)), COMBO(search, LCTL(KC_F)), COMBO(select_all, LCTL(KC_A)), COMBO(copy_all, COPY_ALL), COMBO(cut_all, CUT_ALL),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -69,6 +71,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case COPY_ALL:
                 tap_code16(LCTL(KC_A));
                 tap_code16(LCTL(KC_C));
+                return false;
+            case CUT_ALL:
+                tap_code16(LCTL(KC_A));
+                tap_code16(LCTL(KC_X));
                 return false;
 
             // Workaround for mod tap with non basic keycodes

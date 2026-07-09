@@ -6,7 +6,7 @@ This is a personal [QMK](https://qmk.fm) configuration for the [TOTEM](https://g
 
 First, ensure QMK is set up on your system. 
 
-Next, clone this repository into your QMK keyboards directory. Assuming default paths, use the following command:
+Next, clone this repository into your QMK keyboards directory. *Assuming default paths*, use the following command:
 
 ```bash
 git clone https://github.com/SamuelBorn/qmk-keymap.git ~/qmk_firmware/keyboards/totem

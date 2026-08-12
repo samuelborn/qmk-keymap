@@ -9,7 +9,7 @@ First, ensure QMK is set up on your system.
 Next, clone this repository into your QMK keyboards directory. *Assuming default paths*, use the following command:
 
 ```bash
-git clone https://github.com/SamuelBorn/qmk-keymap.git ~/qmk_firmware/keyboards/totem
+git clone git@github.com:samuelborn/qmk-keymap.git ~/qmk_firmware/keyboards/totem
 ```
 
 To flash the firmware, connect one half of the keyboard at a time, press its reset button twice, and run the corresponding command.

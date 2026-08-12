@@ -124,3 +124,9 @@ bool caps_word_press_user(uint16_t keycode) {
             return false; // Deactivate Caps Word.
     }
 }
+
+// Override master detection: Left half (EEPROM) is always master, Right half is always slave.
+bool is_keyboard_master_impl(void) {
+    return eeconfig_read_handedness();
+}
+

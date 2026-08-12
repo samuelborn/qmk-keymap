@@ -263,7 +263,7 @@ path.combo {
 </g>
 <g transform="translate(817, 209) rotate(10.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<text x="0" y="0" class="key tap">LGUI</text>
+<text x="0" y="0" class="key tap">CAPS</text>
 </g>
 <g transform="translate(255, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>

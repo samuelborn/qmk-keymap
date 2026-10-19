@@ -14,6 +14,10 @@ enum custom_keycodes {
     CUT_ALL,
 };
 
+// macOS treats the board as ISO, which swaps the grave and non-US backslash keys
+#define MAC_GRV KC_NUBS
+#define MAC_TILD S(KC_NUBS)
+
 const uint16_t PROGMEM cut[]        = {KC_X, KC_M, COMBO_END};
 const uint16_t PROGMEM copy[]       = {KC_L, KC_D, COMBO_END};
 const uint16_t PROGMEM paste[]      = {KC_D, KC_C, COMBO_END};
@@ -50,9 +54,9 @@ XXXXXXX, KC_CIRC, KC_PERC,         KC_EXLM,         KC_QUES,         KC_DLR,    
     ),
 
     [NAV] = LAYOUT(
-        XXXXXXX, KC_BSLS,         KC_LBRC,         KC_RBRC,          KC_GRV,        KC_PGUP, LGUI(KC_LEFT), DEL_END,  LGUI(KC_RGHT), XXXXXXX,
+        XXXXXXX, KC_BSLS,         KC_LBRC,         KC_RBRC,         MAC_GRV,        KC_PGUP, LGUI(KC_LEFT), DEL_END,  LGUI(KC_RGHT), XXXXXXX,
 LCTL_T(KC_PIPE), LALT_T(KC_AMPR), LGUI_T(KC_LPRN), RSFT_T(KC_RPRN), KC_HASH,        KC_PGDN, KC_LEFT,       KC_UP,    KC_RGHT,       XXXXXXX,
-XXXXXXX, KC_TILD, HOME,           KC_LCBR,         KC_RCBR,           KC_AT,        XXXXXXX, LALT(KC_LEFT), KC_DOWN,  LALT(KC_RGHT), XXXXXXX, XXXXXXX,
+XXXXXXX, MAC_TILD, HOME,          KC_LCBR,         KC_RCBR,           KC_AT,        XXXXXXX, LALT(KC_LEFT), KC_DOWN,  LALT(KC_RGHT), XXXXXXX, XXXXXXX,
                                                   _______, _______, _______,        _______, _______, _______
     ),
     // clang-format on
@@ -62,7 +66,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
             case HOME:
-                send_string("~/");
+                tap_code16(MAC_TILD);
+                tap_code(KC_SLSH);
                 return false;
             case DEL_END:
                 tap_code16(LSFT(LGUI(KC_RGHT)));
